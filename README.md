@@ -45,3 +45,10 @@ EasyRAG-main/
 ├── config_data.py           # 全局配置
 ├── requirements.txt         # 依赖包
 └── README.md                # 说明文档
+
+---
+
+## 🛠️ 环境部署
+
+
+
