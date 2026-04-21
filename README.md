@@ -1,4 +1,4 @@
-# KnowledgeBase-RAG-LLM-System
+#EasyRAG-LLM-System
 
  ## 基于 Streamlit + LangChain 的本地智能知识库问答系统
 一站式文件上传 + RAG 检索增强问答系统，单页面完成文档上传、实时入库、流式对话、多轮记忆
