@@ -1,4 +1,3 @@
-# EasyRAG
 # EasyRAG 一体化本地知识库问答系统
 **极简部署 · 单页面全功能 · 多格式文档 · 实时生效 · RAG智能问答**
 
@@ -35,7 +34,14 @@
 ---
 
 ## 🧩 项目结构
-升级为 Agent 智能体
-替换向量库为 FAISS / Milvus
-📄 许可证
-MIT License 开源免费
+```text
+EasyRAG-main/
+├── app_chat.py              # 主程序（一体化页面：上传 + 对话）
+├── file_parser.py           # 多格式文档解析器（TXT/PDF/DOCX）
+├── knowledge_base.py        # 文档处理、切片、MD5去重、向量入库
+├── rag.py                   # RAG 核心链、对话历史管理
+├── vector_stores.py         # Chroma 向量库封装
+├── file_history_store.py    # 对话历史本地存储
+├── config_data.py           # 全局配置
+├── requirements.txt         # 依赖包
+└── README.md                # 说明文档
