@@ -1,6 +1,7 @@
-# EasyRAG-LLM-System
-## 基于 Streamlit + LangChain 的本地智能知识库问答系统
-- 一站式文件上传 + RAG 检索增强问答系统，单页面完成文档上传、实时入库、流式对话、多轮记忆
+# KnowledgeBase-RAG-LLM-System
+
+ ## 基于 Streamlit + LangChain 的本地智能知识库问答系统
+一站式文件上传 + RAG 检索增强问答系统，单页面完成文档上传、实时入库、流式对话、多轮记忆
 - 在网页端上传 `TXT / PDF / DOCX（Word）` 文件，自动切分后写入 Chroma 向量库
 - 在网页端以聊天形式提问，基于知识库内容进行检索增强回答（RAG） 
 - 支持 会话历史查看，流式思维链输出
@@ -28,14 +29,14 @@
 ---
 <!-- 智能客服示例图 -->
 <div align="left">
-  <img src="./assets/demo1.png" width="750" alt="智能客服聊天界面示例 1">
+  <img src="./assets/chat_demo1.png" width="750" alt="智能客服聊天界面示例 1">
 </div>
 
 - 本地知识库预存了衣物尺码推荐表、材质维护、穿衣搭配等示例内容（data见assets）
 - 对标电商，可按个人需求替换为自己的业务文本
 ---
 <div align="left">
-  <img src="./assets/demo2.png" width="750" alt="智能客服聊天界面示例 2">
+  <img src="./assets/chat_demo2.png" width="750" alt="智能客服聊天界面示例 2">
 </div>
 
 - 支持结合历史消息进行连续问答
@@ -46,16 +47,16 @@
 ## 🧩 项目结构
 
 ```text
-EasyRag/
-├── app_chat.py              # 主程序（一体化页面：上传 + 对话）
-├── file_parser.py           # 多格式文档解析器（TXT/PDF/DOCX）
-├── knowledge_base.py        # 文档处理、切片、MD5去重、向量入库
-├── rag.py                   # RAG 核心链、对话历史管理
-├── vector_stores.py         # Chroma 向量库封装
-├── file_history_store.py    # 对话历史本地存储
-├── config_data.py           # 全局配置
-├── requirements.txt         # 依赖包
-└── README.md                # 说明文档
+KnowledgeBase-RAG-LLM-System/
+├─ app_upload.py              # 知识库上传服务（Streamlit）
+├─ app_chat.py                # 智能客服问答（Streamlit）
+├─ knowledge_base.py          # 知识库处理：读取、切分、写库、去重
+├─ rag.py                     # RAG 链组装
+├─ vector_stores.py           # 向量库检索封装（持久化）
+├─ file_history_store.py      # 会话历史存储
+├─ config_data.py             # 模型、路径、chunk 等参数配置
+├─ requirements.txt           # 项目依赖（配置环境）
+└─ assets/                    # README 演示图片与示例素材文本所在
 ```
 ---
 ## ✅ 环境准备
