@@ -47,16 +47,16 @@
 ## 🧩 项目结构
 
 ```text
-KnowledgeBase-RAG-LLM-System/
-├─ app_upload.py              # 知识库上传服务（Streamlit）
-├─ app_chat.py                # 智能客服问答（Streamlit）
-├─ knowledge_base.py          # 知识库处理：读取、切分、写库、去重
-├─ rag.py                     # RAG 链组装
-├─ vector_stores.py           # 向量库检索封装（持久化）
-├─ file_history_store.py      # 会话历史存储
-├─ config_data.py             # 模型、路径、chunk 等参数配置
-├─ requirements.txt           # 项目依赖（配置环境）
-└─ assets/                    # README 演示图片与示例素材文本所在
+EasyRAG-main/
+├── app_chat.py              # 主程序（一体化页面：上传 + 对话）
+├── file_parser.py           # 多格式文档解析器（TXT/PDF/DOCX）
+├── knowledge_base.py        # 文档处理、切片、MD5去重、向量入库
+├── rag.py                   # RAG 核心链、对话历史管理
+├── vector_stores.py         # Chroma 向量库封装
+├── file_history_store.py    # 对话历史本地存储
+├── config_data.py           # 全局配置
+├── requirements.txt         # 依赖包
+└── README.md                # 说明文档例素材文本所在
 ```
 ---
 ## ✅ 环境准备
