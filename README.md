@@ -1,5 +1,5 @@
-# EasyRAG-LLM-System
-
+# FashionRAG 电商服饰智能问答客服系统
+专为服装电商打造的 RAG 智能客服，可自动回答尺码、面料、洗涤、售后、搭配等问题。
  ## 基于 Streamlit + LangChain 的本地智能知识库问答系统
 一站式文件上传 + RAG 检索增强问答系统，单页面完成文档上传、实时入库、流式对话、多轮记忆
 - 在网页端上传 `TXT / PDF / DOCX（Word）` 文件，自动切分后写入 Chroma 向量库
@@ -9,19 +9,31 @@
 
 ---
 
+## 业务场景
+- 用户咨询衣服尺码
+- 询问面料是否透气、是否起球
+- 洗涤方式、保养说明
+- 退换货政策
+- 风格搭配建议
+
+---
+
+
 ## ✨ 功能一览
 
 ### 1) 知识库更新服务（Upload）
-- Streamlit 页面上传文件，显示基本格式
+- Streamlit 页面上传服饰知识库 → 自动构建专业客服问答
 - 自动读取文本内容
 - 根据配置进行分段（RecursiveCharacterTextSplitter）
 - 写入 Chroma 向量库（本地持久化）
 - 使用 **MD5 去重**：相同内容不重复入库
 
 ### 2) 智能客服（RAG Chat）
-- Streamlit Chat UI
 - 显示历史消息（session_state）
 - LangChain 链式调用：`Retrieval -> Prompt -> LLM -> Output`
+- 支持多轮对话，上下文理解
+- 基于真实业务规则回答，不胡说
+- 实时更新知识库，无需重启
 - 支持 **流式输出**
 - 支持 **消息历史文件存储**（FileChatMessageHistory）
 
